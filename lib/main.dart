@@ -42,6 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     borderRadius: BorderRadius.circular(10)),
                 height: 120,
                 child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
                       "ยอดคงเหลือ",
@@ -50,11 +51,16 @@ class _MyHomePageState extends State<MyHomePage> {
                           color: Colors.white,
                           fontWeight: FontWeight.bold),
                     ),
-                    Text("1500",
+                    Expanded(
+                      child: Text(
+                        "1500",
                         style: TextStyle(
                             fontSize: 25,
                             color: Colors.white,
-                            fontWeight: FontWeight.bold))
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.right,
+                      ),
+                    )
                   ],
                 ),
               ),
@@ -73,11 +79,44 @@ class _MyHomePageState extends State<MyHomePage> {
                           color: Colors.white,
                           fontWeight: FontWeight.bold),
                     ),
-                    Text("1000",
+                    Expanded(
+                      child: Text(
+                        "1500",
                         style: TextStyle(
                             fontSize: 25,
                             color: Colors.white,
-                            fontWeight: FontWeight.bold))
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.right,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                    color: Colors.red, borderRadius: BorderRadius.circular(10)),
+                height: 120,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      "รายจ่าย",
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Expanded(
+                      child: Text(
+                        "1500",
+                        style: TextStyle(
+                            fontSize: 25,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.right,
+                      ),
+                    )
                   ],
                 ),
               )
