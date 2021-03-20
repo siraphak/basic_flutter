@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "My app",
       home: MyHomePage(),
-      theme: ThemeData(primarySwatch: Colors.lightBlue),
+      theme: ThemeData(primarySwatch: Colors.purple),
     );
   }
 }
@@ -27,26 +27,62 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("บัญชีของฉัน"),
+          title: Text("บัญชีของฉัน",
+              style:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
         ),
-        body: Column(
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                  color: Colors.green, borderRadius: BorderRadius.circular(10)),
-              height: 100,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                  color: Colors.red, borderRadius: BorderRadius.circular(10)),
-              height: 100,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                  color: Colors.blue, borderRadius: BorderRadius.circular(10)),
-              height: 100,
-            )
-          ],
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(10)),
+                height: 120,
+                child: Row(
+                  children: [
+                    Text(
+                      "ยอดคงเหลือ",
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Text("1500",
+                        style: TextStyle(
+                            fontSize: 25,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold))
+                  ],
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.circular(10)),
+                height: 120,
+                child: Row(
+                  children: [
+                    Text(
+                      "รายรับ",
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Text("1000",
+                        style: TextStyle(
+                            fontSize: 25,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold))
+                  ],
+                ),
+              )
+            ],
+          ),
         ));
   }
 }
