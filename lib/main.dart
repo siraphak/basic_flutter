@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "My app",
       home: MyHomePage(),
-      theme: ThemeData(primarySwatch: Colors.pink),
+      theme: ThemeData(primarySwatch: Colors.lightBlue),
     );
   }
 }
@@ -22,32 +22,31 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int number = 0; //การสร้าง State
-
+  // แสดงผลข้อมูล
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("โปรแกรมนับเลข"),
-      ),
-      body: Center(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text("กดปุ่มเพื่อเพิ่มจำนวนตัวเลข"),
-          Text(number.toString(), style: TextStyle(fontSize: 60)),
-        ],
-      )),
-      floatingActionButton: FloatingActionButton(
-        onPressed: addNumber,
-        child: Icon(Icons.add),
-      ),
-    );
-  }
-
-  void addNumber() {
-    setState(() {
-      number++;
-    });
+        appBar: AppBar(
+          title: Text("บัญชีของฉัน"),
+        ),
+        body: Column(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.green, borderRadius: BorderRadius.circular(10)),
+              height: 100,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.red, borderRadius: BorderRadius.circular(10)),
+              height: 100,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.blue, borderRadius: BorderRadius.circular(10)),
+              height: 100,
+            )
+          ],
+        ));
   }
 }
