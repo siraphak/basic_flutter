@@ -22,7 +22,7 @@ class MoneyBox extends StatelessWidget {
           Text(
             title,
             style: TextStyle(
-                fontSize: 25, color: Colors.white, fontWeight: FontWeight.bold),
+                fontSize: 30, color: Colors.white, fontWeight: FontWeight.bold),
           ),
           Expanded(
             child: Text(
