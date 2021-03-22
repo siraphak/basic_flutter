@@ -7,6 +7,8 @@ class MoneyBox extends StatelessWidget {
   Color color; //สีของกล่อง
   double size; //ขนาดของกล่อง
 
+  MoneyBox(this.title, this.amount, this.color, this.size);
+
   @override
   Widget build(BuildContext context) {
     return Container(
