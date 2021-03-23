@@ -36,19 +36,19 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              MoneyBox("ยอดคงเหลือ", 1000, Colors.lightBlue, 120),
+              MoneyBox("ยอดคงเหลือ", 1000.33, Colors.lightBlue, 120),
               SizedBox(
                 height: 5,
               ),
-              MoneyBox("รายรับ", 100, Colors.green, 100),
+              MoneyBox("รายรับ", 100.33, Colors.green, 100),
               SizedBox(
                 height: 5,
               ),
-              MoneyBox("รายรับ", 10, Colors.red, 100),
+              MoneyBox("รายรับ", 10.5, Colors.red, 100),
               SizedBox(
                 height: 5,
               ),
-              MoneyBox("ค้างชำระ", 100, Colors.orange, 100)
+              MoneyBox("ค้างชำระ", 100.66, Colors.orange, 100)
             ],
           ),
         ));
