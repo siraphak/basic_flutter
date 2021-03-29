@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'MoneyBox.dart';
+import 'package:http/http.dart' as http;
 
 void main() {
   runApp(MyApp());
@@ -26,15 +26,21 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    print("เรียกใช้งานครั้งเดียว init State");
+    getExchangeRate();
+  }
+
+  Future<void> getExchangeRate() async {
+    var url =
+        Uri.parse('https://api.exchangeratesapi.io/latest?symbols=USD,THB');
+    var response = await http.get(url);
+    print(response.body);
   }
 
   @override
   Widget build(BuildContext context) {
-    print("เรียกใช้งาน build");
     return Scaffold(
         appBar: AppBar(
-          title: Text("บัญชีของฉัน",
+          title: Text("อัตราการแลกเปลี่ยนสกุลเงิน",
               style:
                   TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
         ),
