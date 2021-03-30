@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'ExchangeRate.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,6 +24,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  ExchangeRate _dataFromAPI;
   @override
   void initState() {
     super.initState();
@@ -33,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
     var url =
         Uri.parse('https://api.exchangeratesapi.io/latest?symbols=USD,THB');
     var response = await http.get(url);
-    print(response.body);
+    _dataFromAPI = exchangeRateFromJson(response.body); //json => dart object
   }
 
   @override
